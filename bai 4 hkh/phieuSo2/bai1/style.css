@@ -1,0 +1,25 @@
+#tit{
+    background-color: orange;
+    color: #000;
+    border-bottom: 4px solid #000;
+    text-transform: uppercase;
+    width: 908px;
+    height: 20px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+th{
+    background-color: orange;
+    color: #fff;
+    text-align: center;
+    border: 1px solid orangered; 
+}
+
+td{
+    border: 1px solid orangered;
+}
+
+table{
+    border: 1;
+    border-collapse: collapse;
+}

@@ -1,0 +1,13 @@
+body{
+    background-color: #a06d21;
+    color: #fff;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2023/02/02192048/great-wall-of-china-1600x900.jpeg?tr=w-600,pr-true);
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    color: #ffcc00;
+    text-align: center;
+}

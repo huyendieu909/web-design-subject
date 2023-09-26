@@ -1,0 +1,23 @@
+#menuNgang ul{
+    display:table-row;
+    background-color: blue;
+    width: 906px;
+    height: 40px;
+}
+#menuNgang ul li{
+    display: inline;
+    margin-block-start: 0%;
+    list-style-type: none;
+}
+#menuNgang ul li a{
+    display: inline-block;
+    width:150px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 37px;
+}
+#menuNgang ul li a:hover{
+    background-color: red;
+    height: 40px;
+}

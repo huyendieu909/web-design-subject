@@ -1,0 +1,21 @@
+h1{
+    color: #089a28;
+    text-align: center;
+}
+.sbj{
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: normal;
+}
+p{
+    font-style: italic;
+}
+.ct{
+    font-style: normal;
+    color: #ff0000;
+}
+.codeTin{
+    color: #0000cc;
+    background-color: #cccccc;
+    text-align: left;
+}

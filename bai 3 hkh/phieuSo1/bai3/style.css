@@ -1,0 +1,24 @@
+#me{
+    color: #ff3399;
+    background-color: #fecffd;
+    margin-bottom: 30px;
+}
+
+body{
+    background-color: #ffffcc;
+}
+.p1{
+    font-style: italic;
+    color: aqua;
+    text-align: center;
+}
+.p2{
+    text-align: center;
+    font-style: italic;
+    color: red;
+}
+.p3{
+    text-align: center;
+    font-style: italic;
+    color: #00ffff;
+}

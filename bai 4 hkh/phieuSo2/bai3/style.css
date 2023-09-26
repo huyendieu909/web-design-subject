@@ -1,0 +1,38 @@
+#menu ul{
+    display: -ms-inline-flexbox;
+    background-color: blue;
+    width: auto;
+    height: 30px;
+}
+#menu ul li{
+    display: inline;
+    list-style-type: none;
+}
+#menu ul li a{
+    padding: 5px 0px 0px;
+    display: inline-block;
+    line-height: 20px;
+    text-decoration: none;
+    text-align: center;
+    height: 30px;
+    width: 150px;
+    color: #fff;
+}
+#menu ul li a:hover{
+    display: inline-block;
+    background-color: orangered;
+}
+.cha{
+    position: relative;
+}
+.con{
+    position: absolute;
+    display: none;
+    width: 200px;
+}
+.cha:hover .con{
+    display: flex;
+}
+*{
+    box-sizing: border-box;
+}

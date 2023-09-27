@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phép cộng số có 1 chữ số</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+  <script>
+    var soThuNhat = 0;
+    var soThuHai = 0;
+    function nhapSo(so) {
+      if (soThuNhat === 0) {
+        soThuNhat = parseInt(so);
+        document.getElementById("so1").innerHTML = soThuNhat;
+      } else if (soThuHai === 0) {
+        soThuHai = parseInt(so);
+        document.getElementById("so2").innerHTML = soThuHai;
+      }
+    }
+    function tinhTong() {
+      var tong = soThuNhat + soThuHai;
+      document.getElementById("ketQua").innerHTML = "Kết quả: " + tong;
+    }
+    function resetSo(){
+        document.getElementById("so1").innerHTML = 0;
+        document.getElementById("ketQua").innerHTML = "";
+        soThuNhat = 0;
+    }
+    function resetSo2(){
+        document.getElementById("so2").innerHTML = 0;
+        document.getElementById("ketQua").innerHTML = "";
+        soThuHai = 0;
+    }
+    document.writeln("Đề bài khó hiểu??");
+  </script>
+</head>
+<body>
+  <h1>Phép cộng số có 1 chữ số</h1>
+  <div>
+    <button id="so1" onclick="resetSo()" type="button" style="width: 30px; height: 30px;"></button>
+    <button id="so2" onclick="resetSo2()" type="button" style="width: 30px; height: 30px;"></button>
+    <button id="ketQua" type="button"></button>
+  </div>
+  <div>
+    <button id="button0" onclick="nhapSo(0)">0</button>
+    <button id="button1" onclick="nhapSo(1)">1</button>
+    <button id="button2" onclick="nhapSo(2)">2</button>
+    <button id="button3" onclick="nhapSo(3)">3</button>
+    <button id="button4" onclick="nhapSo(4)">4</button>
+    <button type="button">+</button>
+  </div>
+  <div>
+    <button id="button5" onclick="nhapSo(5)">5</button>
+    <button id="button6" onclick="nhapSo(6)">6</button>
+    <button id="button7" onclick="nhapSo(7)">7</button>
+    <button id="button8" onclick="nhapSo(8)">8</button>
+    <button id="button9" onclick="nhapSo(9)">9</button>
+    <button onclick="tinhTong()">=</button><br>    
+  </div>
+</body>
+</html>

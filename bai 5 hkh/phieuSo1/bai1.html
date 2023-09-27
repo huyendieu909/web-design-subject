@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>baitap1</title>
+    
+</head>
+<body>
+    <label for="day">Ngày tháng năm sinh: </label>
+    <select id="day"></select>
+    <label for="month">tháng</label>
+    <select id="month"></select>
+    <label for="year">năm</label>
+    <select id="year"></select>
+    <script>
+        var daySel = document.getElementById("day");
+        for (var i = 1; i <= 31; i++){
+            var option = document.createElement("option");
+            option.text = i;
+            daySel.add(option);
+        }
+        var monthSel = document.getElementById("month");
+        for (var i = 1; i<= 12; i++){
+            var option = document.createElement("option");
+            option.text = i;
+            monthSel.add(option);
+        }
+        var yearSel = document.getElementById("year");
+        currentYear = new Date().getFullYear();
+        for (var i = 1900; i <= currentYear; i++) {
+            var option = document.createElement("option");
+            option.text = i;
+            yearSel.add(option);
+        }
+    </script>
+</body>
+</html>

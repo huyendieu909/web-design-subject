@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai1sll</title>
+    <script>
+        var a=4, b=6, c=2;
+        var delta = b*b - 4*a*c;
+        if (delta < 0) document.writeln("Phương trình ax2+bx+c=0 với a=4, b=6, c=2 vô nghiệm");
+        else if (delta == 0) {
+            result = -b/(2*a);
+            document.writeln("Phương trình ax2+bx+c=0 với a=4, b=6, c=2 có nghiệm kép: " + result);
+        }
+        else {
+            result1 = (-b-Math.sqrt(delta))/(2*a);
+            result2 = (-b+Math.sqrt(delta))/(2*a);
+            document.writeln("Phương trình ax2+bx+c=0 với a=4, b=6, c=2 có 2 nghiệm: x1 = " + result1 + ", x2 = "  + result2
+            );
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

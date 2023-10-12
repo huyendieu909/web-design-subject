@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Bài 1 phiếu 2</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h2>Giải phương trình ax<sup>2</sup> + bx + c = 0</h2>
+    Nhập các giá trị a, b, c <br>
+    a =
+    <input type="text" id="a" style="width: 50px;"><br>
+    b =
+    <input type="text" id="b" style="width: 50px;"><br>
+    c =
+    <input type="text" id="c" style="width: 50px;"><br>
+    <button type="button" id="giai" onclick="giaiPT()">Giải</button>
+    <script>
+        function giaiPT(){
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var c = document.getElementById("c").value;
+            var delta = b*b - 4*a*c;
+            if (delta < 0) document.getElementById("giai").innerHTML = "Phương trình vô nghiệm";
+            else if (delta == 0) {
+                var res = -b / (2*a);
+                document.getElementById("giai").innerHTML = 'Phương trình có nghiệm kép: x = '+res;
+            }
+            else {
+                var x1 = (-b-Math.sqrt(delta))/(2*a);
+                var x2 = (-b+Math.sqrt(delta))/(2*a);
+                document.getElementById("giai").innerHTML = "Phương trình có 2 nghiệm phân biệt: <br> x1 = "+ x1 + ", x2 = "+x2;
+            }
+        }
+    </script>
+</body>
+</html>

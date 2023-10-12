@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Bai 2 phieu 3</title>
+</head>
+<body>
+    <h2>JavaScript có thể kiểm soát form</h2>
+    Hãy nhập số vào hộp text (từ 1 đến 10):<br><br>
+    <input type="text" id="te">
+    <button type="button" onclick="kiemTra()">Submit</button>
+    <p id="tes"></p>
+    <script>
+        function kiemTra(){
+            var b = document.getElementById("te").value;
+            if (isNaN(b) || b < 1 || b > 10) document.getElementById("tes").innerHTML = "Dữ liệu không đúng";
+            else document.getElementById("tes").innerHTML = "Dữ liệu đúng";
+        }
+    </script>
+</body>
+</html>

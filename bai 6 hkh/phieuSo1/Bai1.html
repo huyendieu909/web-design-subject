@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <script>
+        
+        function tinh(){
+            var tuoi = document.getElementById("tdl").value;
+            var currentYear = new Date().getFullYear();
+            var bornYear = currentYear - tuoi;
+            var s = "";
+            var tem = bornYear % 10;
+            switch (tem) {
+                case 0:
+                    s+="Canh ";
+                    break;
+                case 1:
+                    s+="Tân ";
+                    break;
+                case 2:
+                    s+="Nhâm ";
+                    break;
+                case 3:
+                    s+="Quý ";
+                    break;
+                case 4:
+                    s+="Giáp ";
+                    break;
+                case 5:
+                    s+="Ất ";
+                    break;
+                case 6:
+                    s+="Bính ";
+                    break;
+                case 7:
+                    s+="Đinh ";
+                    break;
+                case 8:
+                    s+="Mậu ";
+                    break;
+                case 9:
+                    s+="Kỷ ";
+                    break;
+            }
+            var tem2 = bornYear % 12;
+            switch (tem2) {
+                case 0:
+                    s+="Thân ";
+                    break;
+                case 1:
+                    s+="Dậu ";
+                    break;
+                case 2:
+                    s+="Tuất ";
+                    break;
+                case 3:
+                    s+="Hợi ";
+                    break;
+                case 4:
+                    s+="Tý ";
+                    break;
+                case 5:
+                    s+="Sửu ";
+                    break;
+                case 6:
+                    s+="Dần ";
+                    break;
+                case 7:
+                    s+="Mão ";
+                    break;
+                case 8:
+                    s+="Thìn ";
+                    break;
+                case 9:
+                    s+="Tỵ ";
+                    break;
+                case 10:
+                    s+="Ngọ ";
+                    break;
+                case 11:
+                    s+="Mùi ";
+                    break;
+            }
+            document.getElementById("tal").value = s;
+        }
+        
+    </script>
+</head>
+<body>
+    <div>
+        <table border="1" style="background-color: rgb(255, 153, 204);"">
+            <tr>
+                <td colspan="2">
+                    Chương trình tra tuổi
+                </td>
+            </tr>
+            <tr>
+                <td>Tuổi dương lịch</td>
+                <td><input type="text" id="tdl"></td>
+            </tr>
+            <tr>
+                <td>Tuổi âm lịch</td>
+                <td><input type="text" id="tal"></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2" style="align-self: center;">
+                    <button type="reset">Xóa</button>
+                    <button type="button" onclick="tinh()">Tra cứu</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

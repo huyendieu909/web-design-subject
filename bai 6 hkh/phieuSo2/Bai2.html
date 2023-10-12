@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai 2 phieu 2</title>
+    <script>
+        var s = "";
+        function nhapso(so){
+            s+=so;
+            document.getElementById("te").innerHTML = s;
+            // document.write(s);
+        }
+        function tinhTong(){
+            var rs = eval(s);
+            document.getElementById("te").innerHTML = rs;
+        }
+        function resetSo(){
+            document.getElementById("te").innerHTML = "";
+            s = "";
+        }
+        function addButton(start,end){
+            for (let i=start; i<=end;i++){
+                document.write('<button id="'+i+'" type="button" onclick="nhapso('+i+')" style="width: 30px; height: 30px;">'+i+'</button> ');
+            }
+        }
+    </script>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("<h1>Bài 2</h1>");
+        addButton(1,5);
+    </script>
+    <button id="-" type="button" onclick="nhapso('-')" style="width: 30px; height: 30px;">-</button>
+    <br>
+    <script>
+        addButton(6,9);
+        addButton(0,0);
+    </script>
+    <button id="=" type="button" onclick="tinhTong()" style="width: 30px; height: 30px;">=</button><br>
+    <button id="te" type="button" onclick="resetSo()" style="width: 200px; height: 30px;"></button><br>
+</body>
+</html>

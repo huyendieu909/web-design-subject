@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai tap 6</title>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="c"></div>
+    <div id="d"></div>
+    <script>
+        var st = "Java thật vi diệu";
+        document.getElementById("a").innerHTML = "Chuỗi ban đầu: "+st;
+        var reg = /^Java/;
+        var kq;
+        if (reg.test(st) == true) s = "Chuỗi bắt đầu bằng Java";
+        else s = "Chuỗi không bắt đầu bằng Java";
+        document.getElementById("b").innerHTML = "Kết quả: "+s;
+        var st2 = "Học Java rất vui <('')";
+        document.getElementById("c").innerHTML = "Chuỗi ban đầu: "+st2;
+        if (reg.test(st2)) s2 = "Chuỗi bắt đầu bằng Java";
+        else s2 = "Chuỗi không bắt đầu bằng Java"; 
+        document.getElementById("d").innerHTML = "Kết quả: "+s2;
+    </script>
+</body>
+</html>

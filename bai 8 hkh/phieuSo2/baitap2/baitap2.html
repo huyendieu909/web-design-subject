@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai tap 2</title>
+</head>
+<body>
+    <div id="b"></div>
+    <div id="a"></div>
+    <script>
+        counth = 0;
+        counta = 0;
+        var st = "học Java thật vi diệu";
+        for (var i = 0; i<st.length;i++){
+            if (st.charAt(i) == 'h') counth++;
+            if (st.charAt(i) == 'a') counta++;
+        }
+        document.getElementById("b").innerHTML = "Chuỗi ban đầu: "+st;
+        document.getElementById("a").innerHTML = "h xuất hiện "+counth+" lần, a xuất hiện "+counta+" lần. ";
+        if (counta == counth) document.write("Số lượng kí tự a và h bằng nhau. ")
+        else document.write("Số lượng kí tự a và h không bằng nhau. ")
+    </script>
+    
+</body>
+</html>

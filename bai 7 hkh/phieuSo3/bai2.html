@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai 2</title>
+    <style>
+        td {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table align="center" border="1" style="border: 5px outset gray;"> 
+        <tr>
+            <td colspan="6">
+                <input type="text" id="kq">
+            </td>
+        </tr>
+        <tr>
+            <td align="center"><input type="text" style="display: block; width: 20px; height: 15px;"></td>
+            <td colspan="2" align="center">
+                <button type="button" onclick="bksp()">BkSp</button>
+            </td>
+            <td colspan="2" align="center">
+                <button type="button">CE</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="resetSo()">C</button>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <button type="button">MC</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="nhapso('7')" >7</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="nhapso('8')" >8</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="nhapso('9')" >9</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="nhapso('/')" >/</button>
+            </td>
+            <td align="center">
+                <button type="button">sqr</button>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <button type="button">MR</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="nhapso('4')" >4</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="nhapso('5')" >5</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="nhapso('6')" >6</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="nhapso('*')" >*</button>
+            </td>
+            <td align="center">
+                <button type="button">%</button>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <button type="button">MS</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="nhapso('1')">1</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="nhapso('2')" >2</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="nhapso('3')">3</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="nhapso('-')" >-</button>
+            </td>
+            <td align="center">
+                <button type="button">1/x</button>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <button type="button">M+</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="nhapso('0')" >0</button>
+            </td>
+            <td align="center">
+                <button type="button">+/-</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="nhapso('.')" >.</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="nhapso('+')" >+</button>
+            </td>
+            <td align="center">
+                <button type="button" onclick="tinh()">=</button>
+            </td>
+        </tr>
+    </table>
+    <button style="margin: 1px 50%; width: 100px;text-align: center;" type="button">More Options</button>
+    <script>
+        var s = "";
+        function nhapso(so){
+            s+=so;
+            document.getElementById("kq").value = s;
+            // document.write(s);
+        }
+        function tinh(){
+            var rs = eval(s);
+            document.getElementById("kq").value = rs;
+        }
+        function resetSo(){
+            document.getElementById("kq").value = "";
+            s = "";
+        }
+        function bksp(){
+            var bk = s.slice(0,-1);
+            s = new String(bk);
+            document.getElementById("kq").value = s;
+        }
+    </script>
+</body>
+</html>

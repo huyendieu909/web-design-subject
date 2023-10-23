@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai 2</title>
+    <style>
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="Process.php" method="post">
+        <table border="1" colpadding style="border-collapse: collapse;">
+            <tr align="center">
+                <th>
+                    <input type="checkbox" id="1" name="1" value="1" onclick="toggle()">
+                </th>
+                <th>Order No</th>
+                <th>Customer Name</th>
+                <th>Order date</th>
+                <th>Value</th>
+            </tr>
+            <tr align="left">
+                <td>
+                    <input type="checkbox" id="1" class="1" name="1" value="2">
+                </td>
+                <td>SHD 11</td>
+                <td>Nguyen Van A</td>
+                <td>12/2/2009</td>
+                <td>
+                    <input type="text" name="1" value="20000">
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                    <input type="checkbox" id="1" class="1" name="1" value="3">
+                </td>
+                <td>SHD 12</td>
+                <td>Nguyen Bich Thao</td>
+                <td>12/11/2009</td>
+                <td>
+                    <input type="text" value="55000">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" align="center">Total:</td>
+                <td>
+                    <input type="text" >
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" align="right">
+                    <button type="button">Update</button>
+                    <button type="submit">Save</button>
+                    <button type="button">Back</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        // Lấy tất cả các checkbox trong trang
+        var checkboxes = document.getElementsByClassName('1');
+        
+        // Lấy checkbox để chọn tất cả
+        var checkAll = document.getElementById('1');
+        
+        // Gán sự kiện onchange cho checkbox để chọn tất cả
+        checkAll.onchange = function() {
+            // Lặp qua tất cả các checkbox và gán trạng thái chọn tương tự checkbox để chọn tất cả
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = this.checked;
+            }
+        };
+        
+        // Gán sự kiện onchange cho các checkbox khác
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].onchange = function() {
+                // Kiểm tra xem tất cả các checkbox khác có được chọn hay không
+                var allChecked = true;
+                for (var j = 0; j < checkboxes.length; j++) {
+                    if (!checkboxes[j].checked) {
+                        allChecked = false;
+                        break;
+                    }
+                }
+                
+                // Gán trạng thái chọn cho checkbox để chọn tất cả
+                checkAll.checked = allChecked;
+            };
+        }
+    </script>
+</body>
+</html>

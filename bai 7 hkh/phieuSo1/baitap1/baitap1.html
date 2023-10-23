@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai tap 1</title>
+</head>
+<body>
+    <form> 
+        <input type="text" onfocus="focusOption()" onchange="changeOption()">
+    </form>
+    <script>
+        var a = 0;
+        function focusOption(){
+            if (a == 0) {
+                alert("focus"); 
+                a = 1;
+            }
+        }
+        function changeOption(){
+            alert("change");
+            a = 0;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai tap 3</title>
+</head>
+<body>
+    <div id="d" onclick="den()"><img src="0.png" alt="0"></div>
+    <script>
+        var a = 0;
+        function den(){
+            if (a == 0) {
+                document.getElementById("d").innerHTML = "<img src='1.png' alt='0'>"; 
+                a = 1;
+            } 
+            else {
+                document.getElementById("d").innerHTML = "<img src='0.png' alt='2'>";
+                a = 0;
+            }
+        }
+        
+    </script>
+</body>
+</html>

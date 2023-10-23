@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai so 2</title>
+    <style>
+        tr, button, td{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Mã hóa</h2>
+    <table style="display: flex; justify-content: center;">
+        <tr>
+            <td width="300px">
+                <label for="a">Chuỗi cần mã hóa: </label>
+            </td>
+            <td>
+                <input type="text" id="str" style="width: 150%;">
+            </td>
+        </tr>
+        <tr>
+            <td width="300px">
+                <label for="c">Nhập một số trong khoảng 1 đến 25: </label>
+            </td>
+            <td>
+                <input type="text" id="so" style="width: 150%;">
+            </td>
+        </tr>
+        <tr>
+            <td width="300px">
+                <label for="b">Chuỗi đã mã hóa: </label>
+            </td>
+            <td>
+                <input type="text" id="stre" style="width: 150%;" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button type="button"><a style="text-decoration: none;" href="baiso2.html">Về trang chủ</a></button>
+                <button type="button" onclick="enc()">Mã hóa</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function enc(){
+            var s = document.getElementById("str").value;
+            var soe = parseInt(document.getElementById("so").value);
+            var ss = "";
+            var key = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+            for (let i = 0; i < s.length;i++){
+                if (s.charAt(i)  == ' ') ss += ' ';
+                else {
+                    chisocu = parseInt(key.indexOf(s.charAt(i)));
+                    chisomoi = (chisocu + soe) % 26;
+                    ss += key[chisomoi];
+                }
+            }
+            document.getElementById("stre").value = ss;
+        }
+    </script>
+</body>
+</html>

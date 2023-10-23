@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai tap 4</title>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="b"></div>
+    <script>
+        var st="hello world";
+        document.getElementById("a").innerHTML = st;
+        var ch = [];
+        for (var i=0;i<st.length; i++){
+            ch.push(st.charAt(i));
+        }
+        ch.reverse();
+        var stnew = ch.join('');
+        document.getElementById("b").innerHTML = stnew;
+    </script>
+</body>
+</html>

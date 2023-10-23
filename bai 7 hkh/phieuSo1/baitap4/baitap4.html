@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai tap 4</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td><label for="stn">So thu nhat</label></td>
+                <td width="200px"><input type="text" id="stn"></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <button type="button" id="+" onclick="tinh('+')">+</button>
+                    <button type="button" id="-" onclick="tinh('-')">-</button>
+                    <button type="button" id="*" onclick="tinh('*')">*</button>
+                    <button type="button" id="/" onclick="tinh('/')">/</button>
+                    <button type="button" id="^" onclick="tinhMu()">^</button>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="sth">So thu hai </label></td>
+                <td><input type="text" id="sth">  </td>
+            </tr>
+            <tr>
+                <td><label>Ket qua </label></td>
+                <td><textarea id="kq" wrap="soft"></textarea></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function tinh(t){
+            var a = document.getElementById("stn").value;
+            var b = document.getElementById("sth").value;
+            var s = "";
+            if (a == "") document.getElementById("kq").value = "Chua nhap gia tri cho so thu nhat!";
+            else if (b == "") document.getElementById("kq").value = "Chua nhap gia tri cho so thu hai!";
+            else if (b == 0 && t == "/") document.getElementById("kq").value = "Phep chia cho 0!";
+            else {
+                s += a;
+                s += t;
+                s += b;
+                var kqt = eval(s);
+                document.getElementById("kq").value = kqt;
+            }
+            
+        }
+        function tinhMu(){
+            var a = document.getElementById("stn").value;
+            var b = document.getElementById("sth").value;
+            var rs = Math.pow(a,b);
+            document.getElementById("kq").value = rs;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai tap 3</title>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="b"></div>
+    <script>
+        var st="I love You";
+        var s = "";
+        for (let i = 0;i< st.length;i++){
+            if (st.charAt(i) == st.charAt(i).toUpperCase()) s+= st.charAt(i).toLowerCase();
+            else s += st.charAt(i).toUpperCase();
+        }
+        document.getElementById("a").innerHTML = "Chuỗi ban đầu: "+st;
+        document.getElementById("b").innerHTML = "Chuỗi chuyển đổi: "+s;
+    </script>
+</body>
+</html>

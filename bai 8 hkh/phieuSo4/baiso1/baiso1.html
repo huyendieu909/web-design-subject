@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai so 1</title>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="c"></div>
+    <div id="d"></div>
+    <script>
+        arr = [1,2,3,4,1,2,2,1];
+        document.getElementById("a").innerHTML = "Mảng ban đầu: "+arr;
+        so();
+        function so(){
+            var pt = [];
+            pt[0] = arr[0];
+            for (let i = 1; i<arr.length;i++){
+                var flag = false;
+                for (let j = 0; j < pt.length; j++){
+                    if (arr[i] == pt[j]) {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (flag == false) pt.push(arr[i]);
+            }
+            var lanxh = [];
+            for (let i = 0; i < pt.length; i++){
+                var count = 0;
+                for (var j = 0; j < arr.length; j++){
+                    if (pt[i] == arr[j]) count++;
+                }
+                lanxh.push(count);
+            }
+            document.getElementById("b").innerHTML = "Các phần tử trong mảng: "+pt;
+            document.getElementById("c").innerHTML = "Số lần xuất hiện tương ứng của các phần tử: "+lanxh;
+            var max = lanxh[0];
+            for (let i = 1; i < lanxh.length; i++){
+                if (max < lanxh[i]) {
+                    max = lanxh[i];
+                }
+            }
+            xhnn = [];
+            k = 0;
+            for (let i = 0; i < pt.length; i++){
+                if (lanxh[i] == max) {
+                    xhnn[k] = pt[i];
+                    k++;
+                }
+            }
+            document.getElementById("d").innerHTML = "Phần tử có số lần xuất hiện nhiều nhất: "+xhnn;
+        }
+        
+    </script>
+</body>
+</html>

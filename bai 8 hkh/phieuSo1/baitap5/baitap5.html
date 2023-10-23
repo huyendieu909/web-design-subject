@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai tap 5</title>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="b"></div>
+    <script>
+        var st="hello world";
+        document.getElementById("a").innerHTML = st;
+        s = st.split(" ");
+        var ch = [];
+        for (let i = 0; i < s.length; i++){
+            var ss= s[i][0].toUpperCase();
+            ch.push(ss);
+            for (let j=1;j<s[i].length;j++) ch.push(s[i][j]);
+            ch.push(' ');
+        }
+        var s = ch.join('');
+        document.getElementById("b").innerHTML = s;
+    </script>
+</body>
+</html>

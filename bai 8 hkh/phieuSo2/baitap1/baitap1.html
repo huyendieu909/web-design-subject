@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai tap 1</title>
+</head>
+<body>
+
+    <script>
+        color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+        nameM = ["th", "st", "nd", "rd"];
+        //đừng dùng mảng tên là name như trong hướng dẫn!!
+        for (let i = 0; i < color.length;i++){
+            if (i < 3) {
+                var s = nameM[i+1];
+                document.write((i+1)+s+" choice is "+color[i]+"<br>");
+            }
+            else {
+                document.write((i+1)+nameM[0]+" choice is "+color[i]+"<br>");
+            }
+        }
+    </script>
+</body>
+</html>

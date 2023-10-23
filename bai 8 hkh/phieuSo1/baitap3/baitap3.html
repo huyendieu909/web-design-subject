@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai tap 3</title>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="c"></div>
+    <div id="d"></div>
+    <script>
+        var arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+        document.getElementById("a").innerHTML = "Mảng ban đầu: "+arr;
+        var pt = [];
+        for (let i = 0; i<arr.length;i++){
+            var flag = false;
+            if (arr.indexOf(arr[i]) != arr.lastIndexOf(arr[i])) flag = true;
+            for (var j = 0; j < pt.length; j++){
+                if (pt[j] == arr[i]) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag == true) pt.push(arr[i]);
+        }
+        document.getElementById("b").innerHTML = "Các phần tử xuất hiện nhiều lần: "+pt;
+        var lanxh = [];
+        for (let i = 0; i < pt.length; i++){
+            var count = 0;
+            for (var j = 0; j < arr.length; j++){
+                if (pt[i] == arr[j]) count++;
+            }
+            lanxh.push(count);
+        }
+        document.getElementById("c").innerHTML = "Số lần xuất hiện tương ứng của các phần tử: "+lanxh;
+    </script>
+</body>
+</html>

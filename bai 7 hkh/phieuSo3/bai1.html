@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>bai 1</title>
+</head>
+<body>
+    <h3>Mouse over the squares and the background color will change!</h3>
+    <div style="display: inline-flex; justify-content: space-between; ">
+        <div id="1" style="display: block; width: 100px; height: 100px; background-color: red;" onmouseover="a()" onmouseout=""></div>
+        <div id="2" style="display: block; width: 100px; height: 100px; background-color: blue;" onmouseover="c()" onmouseout="b()"></div>
+        <div id="3" style="display: block; width: 100px; height: 100px; background-color: green;" onmouseover="d()" onmouseout="b()"></div>        
+    </div>
+    <script>
+        function a(){
+            document.getElementById('1').style.backgroundColor = 'green';
+            document.getElementById('2').style.backgroundColor = 'blue';
+            document.getElementById('3').style.backgroundColor = 'red';
+        }
+        function c(){
+            document.getElementById('1').style.backgroundColor = 'blue';
+            document.getElementById('2').style.backgroundColor = 'red';
+            document.getElementById('3').style.backgroundColor = 'green';
+        }
+        function d(){
+            document.getElementById('1').style.backgroundColor = 'red';
+            document.getElementById('2').style.backgroundColor = 'green';
+            document.getElementById('3').style.backgroundColor = 'blue';
+        }
+        function b(){
+            document.getElementById('1').style.backgroundColor = 'red';
+            document.getElementById('2').style.backgroundColor = 'blue';
+            document.getElementById('3').style.backgroundColor = 'green';
+        }
+    </script>
+</body>
+</html>

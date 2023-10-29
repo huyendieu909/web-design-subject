@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: inline-flex;
+            width: 100%;
+        }
+        .menu-ngang {
+            width: 100%;
+        }
+        .menu-ngang > ul {
+            display: inline-flex;
+            justify-content: space-evenly   ;
+            width: 100%;
+            height: auto;
+            background-color: aqua;
+        }
+        .menu-ngang ul li {
+            list-style-type: none;
+        }
+        .menu-ngang ul li a {
+            display: inline-flex;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: aqua;
+        }
+        .menu-ngang ul li a:hover {
+            background-color: aquamarine;
+        }
+        .cha {
+            position: relative;
+        }
+        .con {
+            width: 100%;
+            display: none;
+            position: absolute;
+        }
+        .con > li > a {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .cha:hover .con {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="width: 10%;">
+            <img src="favicon.ico" width="100px" height="100px" alt="0">
+        </div>
+        <div style="width: 80%; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: rgba(255, 235, 205, 0.536);">
+            <a style="text-transform: uppercase; font-size: x-large;">trường đại học công nghiệp hà nội</a>
+            <a style="text-transform: uppercase; font-size: x-large;">khoa công nghệ thông tin</a>
+        </div>
+        <div style="width: 10%;">
+            <img src="favicon.ico" width="100px" height="100px" alt="1">
+        </div>
+    </header>
+    <div class="menu-ngang">
+        <ul>
+            <li>
+                <a href="">Kinh tế</a>
+            </li>
+            <li class="cha">
+                <a href="">Văn hóa xã hội</a>
+                <ul class="con">
+                    <li>
+                        <a href="">Kinh tế1</a>
+                    </li>
+                    <li>
+                        <a href="">Kinh tế2</a>
+                    </li>
+                    <li>
+                        <a href="">Kinh tế3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Giáo dục công</a>
+            </li>
+            <li>
+                <a href="">Học nữa học</a>
+            </li>
+            <li>
+                <a href="">Vừa học vừa</a>
+            </li>
+        </ul>
+    </div>
+    <div style="display: flex; align-items: flex-start;">
+        <div style="width: 20%; display: flex; flex-direction: column; margin-left: 20px; justify-content: center;">
+            <h2>Tủ sách</h2>
+            <div style="margin: 20px;">
+                <ul>
+                    <li>
+                        <a href="">Kinh tế</a>
+                    </li>
+                    <li>
+                        <a href="">Văn hóa xã hội</a>
+                        <ul>
+                            <li>
+                                <a href="">Kinh tế1</a>
+                            </li>
+                            <li>
+                                <a href="">Kinh tế2</a>
+                            </li>
+                            <li>
+                                <a href="">Kinh tế3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Giáo dục công</a>
+                    </li>
+                    <li>
+                        <a href="">Học nữa học</a>
+                    </li>
+                    <li>
+                        <a href="">Vừa học vừa</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="width: 55%; display: flex; flex-direction: column;">
+            <div style="width: 100%; display: inline-flex; margin-top: 0px;">
+                <div>
+                    <img src="favicon.ico" width="100px" height="100px">
+                </div>
+                <div style="display: flex; flex-direction: column; margin-top: 10px;">
+                    <p style="font-weight: bolder;">Mẩu tin một</p>
+                    <p>Jssjfkjdsk sjkdsjfk sjdksj fskdjfk skjdkjfk kklajkj jkajklja fk jskfjsdkjd</p>
+                </div>
+            </div>
+            <div style="width: 100%; display: inline-flex; margin-top: 10px;">
+                <div>
+                    <img src="favicon.ico" width="100px" height="100px">
+                </div>
+                <div style="display: flex; flex-direction: column; margin-top: 10px;">
+                    <p style="font-weight: bolder;">Mẩu tin một</p>
+                    <p>Jssjfkjdsk sjkdsjfk sjdksj fskdjfk skjdkjfk kklajkj jkajklja fk jskfjsdkjd</p>
+                </div>
+            </div>
+            <div style="width: 100%; display: inline-flex; margin-top: 10px;">
+                <div>
+                    <img src="favicon.ico" width="100px" height="100px">
+                </div>
+                <div style="display: flex; flex-direction: column; margin-top: 10px;">
+                    <p style="font-weight: bolder;">Mẩu tin một</p>
+                    <p>Jssjfkjdsk sjkdsjfk sjdksj fskdjfk skjdkjfk kklajkj jkajklja fk jskfjsdkjd</p>
+                </div>
+            </div>
+        </div>
+        <div style="width: 25%; display: flex; flex-direction: column;">
+            <div>
+                <a href="">Đăng ký |</a>
+                <a href="">Đăng nhập</a>
+            </div>
+            <div style="margin-top: 20px; width: 100%;">
+                <table border="1" width="100%">
+                    <tr bgcolor="green">
+                        <td><a style="margin-left: 10px;">Giỏ hàng</a></td>
+                    </tr>
+                    <tr style="margin-left: 5px;">
+                        <td style="display: flex; flex-direction: column;">
+                            <a style=" margin-left: 10px;">Tổng cộng:0VND</a>
+                            <a style=" margin-left: 10px;">Xem giỏ hàng</a>
+                            <a style=" margin-left: 10px;">Thanh toán</a>
+                        </td>
+                    </tr>                        
+                </table>
+            </div>
+            <div style="margin-top: 20px; width: 100%;">
+                <table border="1" width="100%">
+                    <tr>
+                        <td>Hỗ trợ trực tuyến</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="green">Admin Web</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin-top: 20px; width: 100%;">
+                <table border="1">
+                    <tr>
+                        <td bgcolor="green">
+                            <a>Tin mới</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a>Máy in Epson T60 nháy 2 đèn đỏ</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a>ksjkdfjksjfk sjfdksjdfjskjdf jdsjf s sjdk sfjskdjf sjdfk sfj dsjkfjskjf</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a>ksjdfjsdjfklsjfkjksjfksdjfklsjdkfjsl kdjkls fjsk k</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer style="display: inline-flex; background-color: black; color: aliceblue; justify-content: center; align-items: center; height: 50px; width: 100%;">
+        Bản quyền khoa CNTT
+    </footer>
+ </body>
+</html>

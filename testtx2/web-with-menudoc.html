@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        header {
+            display: inline-flex;
+            width: 100%;
+            height: auto;
+        }
+        .menu-doc {
+            width: 100%;
+        }
+        .menu-doc >ul {
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-doc ul li{
+            list-style-type: none;
+        }
+        .menu-doc ul li a {
+            display: inline-flex;
+            width: 100%;
+            padding: 10px;
+            background-color: aqua;
+            text-decoration: none;
+            border-bottom: 1px outset black;
+        }
+        .menu-doc ul li a:hover {
+            background-color: aquamarine;
+        }
+        .cha {
+            display: inline-flex;
+            position: relative;
+        }
+        .con {
+            position: absolute;
+            display: none;
+            left: 100%;
+        }
+        .cha:hover .con{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div style="width: 10%;">
+            <img src="favicon.ico" width="100px" height="100px" alt="0">
+        </div>
+        <div style="width: 80%; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: rgb(35, 148, 110);">
+            <a style="text-transform: uppercase; font-size: x-large;">trường đại học công nghiệp hà nội</a>
+            <a style="text-transform: uppercase; font-size: x-large;">khoa công nghệ thông tin</a>
+        </div>
+        <div style="width: 10%; display: inline-flex; justify-content: right;">
+            <img src="favicon.ico" width="100px" height="100px" alt="0">
+        </div>
+    </header>
+    <div style="display: flex; width: 100%;">
+        <div style="width: 25%;">
+            <div class="menu-doc">
+                <ul>
+                    <li>
+                        <a href="">Kinh tế</a>
+                    </li>
+                    <li class="cha"> 
+                        <a href="">Văn hóa xã hội</a>
+                        <ul class="con">
+                            <li>
+                                <a href="">Kinh tế1</a>
+                            </li>
+                            <li>
+                                <a href="">Kinh tế2</a>
+                            </li>
+                            <li>
+                                <a href="">Kinh tế3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Giáo dục công</a>
+                    </li>
+                    <li>
+                        <a href="">Học nữa học mãi</a>
+                    </li>
+                    <li>
+                        <a href="">Vừa học vừa làm</a>
+                    </li>
+                    <li>
+                        <a href="">Kết bạn bốn phương</a>
+                    </li>
+                    <li>
+                        <a href="">Đào tạo LTV</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="width: 50%; display: flex; flex-direction: column;">
+            <div style="display: inline-flex; margin: 5px;">
+                <div>
+                    <img src="favicon.ico" width="100px" height="100px" alt="0">
+                </div>
+                <div>
+                    sdnfksfknsdfsnkfs fjskdjfsjdfksjfjdsjf sjdksj fsjfksj fdjksjf s dkf sfj
+                </div>
+            </div>
+            <div style="display: inline-flex; margin: 5px;">
+                <div>
+                    <img src="favicon.ico" width="100px" height="100px" alt="0">
+                </div>
+                <div>
+                    sdnfksfknsdfsnkfs fjskdjfsjdfksjfjdsjf sjdksj fsjfksj fdjksjf s dkf sfj
+                </div>
+            </div>
+            <div style="display: inline-flex; margin: 5px;">
+                <div>
+                    <img src="favicon.ico" width="100px" height="100px" alt="0">
+                </div>
+                <div>
+                    sdnfksfknsdfsnkfs fjskdjfsjdfksjfjdsjf sjdksj fsjfksj fdjksjf s dkf sfj
+                </div>
+            </div>
+        </div> 
+        <div style="width: 25%;">
+            <div style="height: 30px; width: 100%; display: inline-flex; justify-content: center; align-items: center; border: 1px outset black;">
+                <a href="">Đăng nhập - </a>
+                <a href="">Đăng ký</a>
+            </div>
+            <div style="display:flex; flex-direction: column; width: 100%; height: auto; margin-top: 20px; border: 1px outset black;">
+                <div style="border: 1px outset black; display: inline-flex; justify-content: center;">
+                    <a style="text-transform: uppercase;">support chat</a>
+                </div>
+                <div>
+                    <p>Nếu bạn ngại book tour hãy gọi</p>
+                    <p>Please call</p>
+                    <p>234823483</p>
+                    <p>9954</p>
+                    <p>Hotline</p>
+                    <p>Mrs. Huong</p>
+                </div>
+            </div>
+            <div style="margin-top: 20px; width: 100%;">
+                <table border="1">
+                    <tr>
+                        <th colspan="2">TÌM KIẾM TOUR</th>
+                    </tr>
+                    <tr>
+                        <td>Loại tour</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nơi đi</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nơi đến</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Giá đi</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Giá đến</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td align="center">
+                            <button type="submit">Tìm kiếm</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer style="display: inline-flex; justify-content: center; align-items: center; background-color: black; color: white; width: 100%; height: 50px;">
+        Bản quyền khoa CNTT
+    </footer>
+ </body>
+</html>

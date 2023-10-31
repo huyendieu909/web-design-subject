@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-image: url("favicon.ico");
+            width: 100%;
+            height: auto;
+        }
+        .menu-ngang {
+            display: inline-flex;
+            width: 100%;
+        }
+        .menu-ngang > ul {
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-between;
+        }
+        .menu-ngang ul li {
+            list-style-type: none;
+        }
+        .menu-ngang ul li a{
+            text-decoration: none;
+            display: inline-flex;
+            padding: 10px 20px;
+            background-color: #33ccff;
+            color: white;
+        }
+        .menu-ngang ul li a:hover {
+            background-color: green;
+            color: yellow;
+        }
+        
+        .menu-doc {
+            display: flex;
+            width: 100%;
+        }
+        .menu-doc > ul {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: #33ccff;
+        }
+        .menu-doc ul li {
+            list-style-type: none;
+        }
+        .menu-doc ul li a{
+            text-decoration: none;
+            display: inline-flex;
+            padding: 10px 20px;
+            width: 100%;
+            background-color: #33ffff;
+            color: white;
+            border: 1px solid black;
+        }
+        .menu-doc ul li a:hover {
+            background-color: green;
+            color: yellow;
+        }
+        .cha {
+            position: relative;
+            display: inline-flex;
+        }
+        .con {
+            display: none;
+            position: absolute;
+            left: 100%;
+            width: 100%;
+        }
+        .cha:hover .con {
+            display: block;
+        }
+        .con > li > a {
+            display: block;
+            background-color: #33ccff;
+            width: 100%;
+        }
+        #tit {
+            text-decoration: none;            
+        }
+        #tit:hover {
+            color: red;
+        }
+        .anh {
+            position: relative;
+        }
+        .anhzoom {
+            display: none;
+            position: absolute;
+        }
+        .anh:hover .anhzoom {
+            display: block;
+            z-index: 2;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="width: 100%; display: inline-flex;">
+            <div style="width: 20%;">
+                <img src="favicon.ico" width="70px" height="70px" alt="0">
+            </div>
+            <div style="width: 80%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <a style="text-transform: uppercase; color: #0033cc; font-size: x-large;">bao thach mineral & production company limited</a>
+                <a style="text-transform: capitalize; font-size: small;">address: but phong village, lien son commune, kim bang district, ha nam province</a>
+            </div>
+        </div>
+        <div style="width: 100%; display: inline-flex; background-color: #33ccff;">
+            <div style="width: 70%;">
+                <div class="menu-ngang">
+                    <ul>
+                        <li>
+                            <a href="">Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="">Sản phẩm</a>
+                        </li>
+                        <li>
+                            <a href="">Giới thiệu</a>
+                        </li>
+                        <li>
+                            <a href="">Tin tức</a>
+                        </li>
+                        <li>
+                            <a href="">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div style="width: 30%; display: inline-flex; justify-content: center; align-items: center;">
+                <input type="text" placeholder=" Nhập từ khóa tìm kiếm">
+                <button type="button">Tim</button>
+            </div>
+        </div>
+    </header>
+    <div style="width: 100%; display: inline-flex; margin-top: 20px;">
+        <div style="width: 25%;">
+            <div class="menu-doc">
+                <ul>
+                    <li>
+                        <h2 style="display: block; text-align: center; background-color: #0066ff;">Theo ứng dụng</h2>
+                    </li>
+                    <li>
+                        <a href="">NL Ngành thức ăn chăn nuôi</a>
+                    </li>
+                    <li>
+                        <a href="">NL Ngành thủy hải sản</a>
+                    </li>
+                    <li>
+                        <a href="">NL Ngành SX phân bón</a>
+                    </li>
+                    <li>
+                        <a href="">Nguyên vật liệu xây dựng</a>
+                    </li>
+                    <li class="cha">
+                        <a href="">Các ngành khác</a>
+                        <ul class="con">
+                            <li>
+                                <a href="">NL Ngành kính</a>
+                            </li>
+                            <li>
+                                <a href="">NL Ngành luyện kim</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="width: 75%; margin-left: 20px;">
+            <div>
+                <a style="display: block; padding: 10px; background-color: #33ccff;">Sản phẩm cùng loại</a>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                <div style="margin-top: 10px; display: flex; justify-content: space-between; ">
+                    <div style="display: flex;flex-direction: column; width: fit-content; background-color: white; border: 1px solid gray;">
+                        <div class="anh" style="margin: 3px; border: 1px solid black;">
+                            <img src="favicon.ico" width="240px" height="160px" alt="0">
+                            <div class="anhzoom">
+                                <img src="favicon.ico" width="480px" height="320px" alt="1">
+                            </div>
+                        </div>
+                        <div style="display: inline-flex; justify-content: center; align-items: center;">
+                            <a href="" id="tit" style="display: block; padding: 10px 40px; ">Hạt silic loại 2</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 10px; display: flex; justify-content: space-between; ">
+                    <div style="display: flex;flex-direction: column; width: fit-content; background-color: white; border: 1px solid gray;">
+                        <div class="anh" style="margin: 3px; border: 1px solid black;">
+                            <img src="favicon.ico" width="240px" height="160px" alt="0">
+                            <div class="anhzoom">
+                                <img src="favicon.ico" width="480px" height="320px" alt="1">
+                            </div>
+                        </div>
+                        <div style="display: inline-flex; justify-content: center; align-items: center;">
+                            <a href="" id="tit" style="display: block; padding: 10px 40px; ">Hạt silic loại 2</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 10px; display: flex; justify-content: space-between; ">
+                    <div style="display: flex;flex-direction: column; width: fit-content; background-color: white; border: 1px solid gray;">
+                        <div class="anh" style="margin: 3px; border: 1px solid black;">
+                            <img src="favicon.ico" width="240px" height="160px" alt="0">
+                            <div class="anhzoom">
+                                <img src="favicon.ico" width="480px" height="320px" alt="1">
+                            </div>
+                        </div>
+                        <div style="display: inline-flex; justify-content: center; align-items: center;">
+                            <a href="" id="tit" style="display: block; padding: 10px 40px; ">Hạt silic loại 2</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 10px; display: flex; justify-content: space-between; ">
+                    <div style="display: flex;flex-direction: column; width: fit-content; background-color: white; border: 1px solid gray;">
+                        <div class="anh" style="margin: 3px; border: 1px solid black;">
+                            <img src="favicon.ico" width="240px" height="160px" alt="0">
+                            <div class="anhzoom">
+                                <img src="favicon.ico" width="480px" height="320px" alt="1">
+                            </div>
+                        </div>
+                        <div style="display: inline-flex; justify-content: center; align-items: center;">
+                            <a href="" id="tit" style="display: block; padding: 10px 40px; ">Hạt silic loại 2</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 10px; display: flex; justify-content: space-between; ">
+                    <div style="display: flex;flex-direction: column; width: fit-content; background-color: white; border: 1px solid gray;">
+                        <div class="anh" style="margin: 3px; border: 1px solid black;">
+                            <img src="favicon.ico" width="240px" height="160px" alt="0">
+                            <div class="anhzoom">
+                                <img src="favicon.ico" width="480px" height="320px" alt="1">
+                            </div>
+                        </div>
+                        <div style="display: inline-flex; justify-content: center; align-items: center;">
+                            <a href="" id="tit" style="display: block; padding: 10px 40px; ">Hạt silic loại 2</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 10px; display: flex; justify-content: space-between; ">
+                    <div style="display: flex;flex-direction: column; width: fit-content; background-color: white; border: 1px solid gray;">
+                        <div class="anh" style="margin: 3px; border: 1px solid black;">
+                            <img src="favicon.ico" width="240px" height="160px" alt="0">
+                            <div class="anhzoom">
+                                <img src="favicon.ico" width="480px" height="320px" alt="1">
+                            </div>
+                        </div>
+                        <div style="display: inline-flex; justify-content: center; align-items: center;">
+                            <a href="" id="tit" style="display: block; padding: 10px 40px; ">Hạt silic loại 2</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 10px; display: flex; justify-content: space-between; ">
+                    <div style="display: flex;flex-direction: column; width: fit-content; background-color: white; border: 1px solid gray;">
+                        <div class="anh" style="margin: 3px; border: 1px solid black;">
+                            <img src="favicon.ico" width="240px" height="160px" alt="0">
+                            <div class="anhzoom">
+                                <img src="favicon.ico" width="480px" height="320px" alt="1">
+                            </div>
+                        </div>
+                        <div style="display: inline-flex; justify-content: center; align-items: center;">
+                            <a href="" id="tit" style="display: block; padding: 10px 40px; ">Hạt silic loại 2</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 10px; display: flex; justify-content: space-between; ">
+                    <div style="display: flex;flex-direction: column; width: fit-content; background-color: white; border: 1px solid gray;">
+                        <div class="anh" style="margin: 3px; border: 1px solid black;">
+                            <img src="favicon.ico" width="240px" height="160px" alt="0">
+                            <div class="anhzoom">
+                                <img src="favicon.ico" width="480px" height="320px" alt="1">
+                            </div>
+                        </div>
+                        <div style="display: inline-flex; justify-content: center; align-items: center;">
+                            <a href="" id="tit" style="display: block; padding: 10px 40px; ">Hạt silic loại 2</a>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+ </body>
+</html>

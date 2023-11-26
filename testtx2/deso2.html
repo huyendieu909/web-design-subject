@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>de2</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header {
+            height: 50px; 
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            background-color: #336699;
+        }
+        #cart a{
+            color: white;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #cart a:hover {
+            color: red;
+        }
+        .menu-doc {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+        .menu-doc > ul {
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-doc >ul li {
+            list-style-type: none;
+        }
+        .menu-doc > ul > li > a {
+            padding: 5px;
+            display: inline-flex;
+            border: 1px outset black;
+            color: black;
+            background-color: white;
+            width: 100%;
+            text-decoration: none;
+        }
+        .menu-doc ul li a:hover {
+            color: #336699;
+        }
+        .cha {
+            position: relative;
+        }
+        .con {
+            display: none ;
+            position: absolute;
+            left: 100%;
+            top: 0%;
+            width: 100px;
+            border: 1px outset black;
+        }
+        .cha:hover .con {
+            display: flex ;
+            flex-direction: column;
+        }
+        .con > li > a {
+            text-decoration: none;
+            padding: 5px;
+        }
+        .tenSP a{
+            color: black;
+            text-decoration: none;
+        }
+        .tenSP a:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="width: 10%;">
+            <img src="favicon.ico" width="100px" height="40px" alt="0">
+        </div>
+        <div style="width: 70%; height: 70%; display: inline-flex; justify-content: center; align-items: center;">
+            <select id="s" style="height: 100%; border: 0;">
+                <option value="1">All Categories</option>
+                <option value="2">2</option>
+            </select>
+            <input type="text" placeholder="Search For Product" style="height: 100%; border: 0;">
+            <button type="button" style="background-color: black; color: white; height: 100%; border: 0; width: 90px;">Search</button>
+        </div>
+        <div style="width: 10%; height: 100%; display: inline-flex; align-items: center; justify-content: center; border-left: 1px outset white ; border-right: 1px outset white;">
+            <div id="cart">
+                <a href="" style="text-decoration: none; margin: 5px;">Cart</a>
+            </div>
+            <img src="favicon.ico">            
+        </div>
+        <div style="width: 10%; display: inline-flex; align-items: center; justify-content: center;">
+            <img src="favicon.ico" alt="1">
+        </div>
+    </header>
+    <div class="menu-doc">
+        <h2 style="display: inline-flex; color: white; background-color: #336699; text-transform: uppercase;">All Categories</h2>
+        <ul>
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">Blog</a>
+            </li>
+            <li class="cha">
+                <a href="">Laptops</a>
+                <ul class="con">
+                    <li>
+                        <a href="" style="border-bottom: 1px outset black;">Dell (0)</a>
+                    </li>
+                    <li>
+                        <a href="">Men (0)</a>
+                    </li>
+                    <li>
+                        <a href="">Pulse (0)</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Shocks</a>
+            </li>
+            <li>
+                <a href="">Cloth</a>
+            </li>
+            <li>
+                <a href="">Cosmetic</a>
+            </li>
+            <li> 
+                <a href="">Desktops</a>
+            </li>
+            <li>
+                <a href="">Kids</a>
+            </li>
+            <li>
+                <a href="">MP3 Players</a>
+            </li>
+            <li>
+                <a href="">Perfume</a>
+            </li>
+            <li>
+                <a href="">+ MORE</a>
+            </li>
+        </ul>
+    </div>
+    <div style="display: flex; flex-wrap: wrap;">
+        <div style="display: flex; flex-direction: column; border: 1px outset gray;">
+            <div>
+                <img src="favicon.ico" width="200px" height="400px" alt="a">
+            </div>
+            <div style="border-bottom: 1px outset gray;">
+                <div class="tenSP">
+                    <a href="">Vòng đeo tay Galaxy Fit-e hành chính hãng</a>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div style="margin: 5px;display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <p style="color: red;">590.000 đ</p>
+                    <p style="color: black; text-decoration: line-through; font-size: small;">900.000 đ</p>
+                </div>
+                <div style="margin: 5px;">
+                    <p style="padding: 2px; background-color: red; color: white; font-size: x-small;">-40%</p>
+                </div>
+                <div style="display: flex;margin-left: 100px; justify-content: center;">
+                    <button type="button"><img src="favicon.ico"></button>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; border: 1px outset gray;">
+            <div>
+                <img src="favicon.ico" width="200px" height="400px" alt="a">
+            </div>
+            <div style="border-bottom: 1px outset gray;">
+                <div class="tenSP">
+                    <a href="">Vòng đeo tay Galaxy Fit-e hành chính hãng</a>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div style="margin: 5px;display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <p style="color: red;">590.000 đ</p>
+                    <p style="color: black; text-decoration: line-through; font-size: small;">900.000 đ</p>
+                </div>
+                <div style="margin: 5px;">
+                    <p style="padding: 2px; background-color: red; color: white; font-size: x-small;">-40%</p>
+                </div>
+                <div style="display: flex;margin-left: 100px; justify-content: center;">
+                    <button type="button"><img src="favicon.ico"></button>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; border: 1px outset gray;">
+            <div>
+                <img src="favicon.ico" width="200px" height="400px" alt="a">
+            </div>
+            <div style="border-bottom: 1px outset gray;">
+                <div class="tenSP">
+                    <a href="">Vòng đeo tay Galaxy Fit-e hành chính hãng</a>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div style="margin: 5px;display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <p style="color: red;">590.000 đ</p>
+                    <p style="color: black; text-decoration: line-through; font-size: small;">900.000 đ</p>
+                </div>
+                <div style="margin: 5px;">
+                    <p style="padding: 2px; background-color: red; color: white; font-size: x-small;">-40%</p>
+                </div>
+                <div style="display: flex;margin-left: 100px; justify-content: center;">
+                    <button type="button"><img src="favicon.ico"></button>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; border: 1px outset gray;">
+            <div>
+                <img src="favicon.ico" width="200px" height="400px" alt="a">
+            </div>
+            <div style="border-bottom: 1px outset gray;">
+                <div class="tenSP">
+                    <a href="">Vòng đeo tay Galaxy Fit-e hành chính hãng</a>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div style="margin: 5px;display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <p style="color: red;">590.000 đ</p>
+                    <p style="color: black; text-decoration: line-through; font-size: small;">900.000 đ</p>
+                </div>
+                <div style="margin: 5px;">
+                    <p style="padding: 2px; background-color: red; color: white; font-size: x-small;">-40%</p>
+                </div>
+                <div style="display: flex;margin-left: 100px; justify-content: center;">
+                    <button type="button"><img src="favicon.ico"></button>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; border: 1px outset gray;">
+            <div>
+                <img src="favicon.ico" width="200px" height="400px" alt="a">
+            </div>
+            <div style="border-bottom: 1px outset gray;">
+                <div class="tenSP">
+                    <a href="">Vòng đeo tay Galaxy Fit-e hành chính hãng</a>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div style="margin: 5px;display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <p style="color: red;">590.000 đ</p>
+                    <p style="color: black; text-decoration: line-through; font-size: small;">900.000 đ</p>
+                </div>
+                <div style="margin: 5px;">
+                    <p style="padding: 2px; background-color: red; color: white; font-size: x-small;">-40%</p>
+                </div>
+                <div style="display: flex;margin-left: 100px; justify-content: center;">
+                    <button type="button"><img src="favicon.ico"></button>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; border: 1px outset gray;">
+            <div>
+                <img src="favicon.ico" width="200px" height="400px" alt="a">
+            </div>
+            <div style="border-bottom: 1px outset gray;">
+                <div class="tenSP">
+                    <a href="">Vòng đeo tay Galaxy Fit-e hành chính hãng</a>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div style="margin: 5px;display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <p style="color: red;">590.000 đ</p>
+                    <p style="color: black; text-decoration: line-through; font-size: small;">900.000 đ</p>
+                </div>
+                <div style="margin: 5px;">
+                    <p style="padding: 2px; background-color: red; color: white; font-size: x-small;">-40%</p>
+                </div>
+                <div style="display: flex;margin-left: 100px; justify-content: center;">
+                    <button type="button"><img src="favicon.ico"></button>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; border: 1px outset gray;">
+            <div>
+                <img src="favicon.ico" width="200px" height="400px" alt="a">
+            </div>
+            <div style="border-bottom: 1px outset gray;">
+                <div class="tenSP">
+                    <a href="">Vòng đeo tay Galaxy Fit-e hành chính hãng</a>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div style="margin: 5px;display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <p style="color: red;">590.000 đ</p>
+                    <p style="color: black; text-decoration: line-through; font-size: small;">900.000 đ</p>
+                </div>
+                <div style="margin: 5px;">
+                    <p style="padding: 2px; background-color: red; color: white; font-size: x-small;">-40%</p>
+                </div>
+                <div style="display: flex;margin-left: 100px; justify-content: center;">
+                    <button type="button"><img src="favicon.ico"></button>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; border: 1px outset gray;">
+            <div>
+                <img src="favicon.ico" width="200px" height="400px" alt="a">
+            </div>
+            <div style="border-bottom: 1px outset gray;">
+                <div class="tenSP">
+                    <a href="">Vòng đeo tay Galaxy Fit-e hành chính hãng</a>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div style="margin: 5px;display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <p style="color: red;">590.000 đ</p>
+                    <p style="color: black; text-decoration: line-through; font-size: small;">900.000 đ</p>
+                </div>
+                <div style="margin: 5px;">
+                    <p style="padding: 2px; background-color: red; color: white; font-size: x-small;">-40%</p>
+                </div>
+                <div style="display: flex;margin-left: 100px; justify-content: center;">
+                    <button type="button"><img src="favicon.ico"></button>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; border: 1px outset gray;">
+            <div>
+                <img src="favicon.ico" width="200px" height="400px" alt="a">
+            </div>
+            <div style="border-bottom: 1px outset gray;">
+                <div class="tenSP">
+                    <a href="">Vòng đeo tay Galaxy Fit-e hành chính hãng</a>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div style="margin: 5px;display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <p style="color: red;">590.000 đ</p>
+                    <p style="color: black; text-decoration: line-through; font-size: small;">900.000 đ</p>
+                </div>
+                <div style="margin: 5px;">
+                    <p style="padding: 2px; background-color: red; color: white; font-size: x-small;">-40%</p>
+                </div>
+                <div style="display: flex;margin-left: 100px; justify-content: center;">
+                    <button type="button"><img src="favicon.ico"></button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>de3</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header {
+            width: 100%;
+            display: inline-flex;
+            height: 50px;
+        }
+        .nav {
+            display: inline-flex;
+            width: 100%;
+            height: 40px;
+            align-items: center;
+            background-color: #ff3399;
+        }
+        .menu-ngang {
+            width: 70%;
+            display: inline-flex;
+        }
+        .menu-ngang > ul {
+            width: 100%;
+            display: inline-flex;
+        }
+        .menu-ngang > ul > li {
+            list-style-type: none;
+        }
+        .menu-ngang > ul > li > a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 14px;
+            display: inline-flex;
+            justify-content: center;
+            background-color: #ff3399;
+        }
+        .menu-ngang > ul > li > a:hover {
+            background-color: #ffccff;
+        }
+        .menu-doc {
+            width: 25%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            border: 1px outset #999999;
+        }
+        .menu-doc > ul {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-doc > ul > li {
+            list-style-type: none;
+        }
+        .menu-doc > ul > li > a {
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            padding: 10px 8px;
+            display: inline-flex;
+            width: 100%;
+        }
+        .cha {
+            position: relative;
+        }
+        .con {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            display: none;
+            width: 150px;
+            border: 1px outset #999999;
+        }
+        .cha:hover .con {
+            display: flex;
+            flex-direction: column;
+        }
+        .con > li{
+            list-style-type: none;
+        }
+        .con > li > a {
+            text-decoration: none;
+            padding: 10px;
+        }
+        #btnAddToCart {
+            background-color: gray;
+            color: black;
+        }
+        #btnAddToCart a {
+            padding: 10px;
+        }
+        #btnAddToCart:hover {
+            background-color: #ff33cc;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="width: 90%;">
+            <img src="favicon.ico" width="100px" height="40px" alt="0">
+        </div>
+        <div style="float: right; width: 10%;">
+            <div style="display: inline-flex; align-items: center;">
+                <img src="favicon.ico" width="30px" height="30px" alt="1" style="margin: 5px;">
+                <div>
+                    <div style="display: flex; flex-direction: column; color: black; text-decoration: none;">
+                        <a href="">Cart</a>
+                        <a>0 items</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="nav">
+        <div class="menu-ngang">
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">Brands</a>
+                </li>
+                <li>
+                    <a href="">Gift Certificates</a>
+                </li>
+                <li>
+                    <a href="">More</a>
+                </li>
+            </ul>
+        </div>
+        <div style="display: inline-flex; height: 80%; width: 30%;; align-items: center;">
+            <input type="text" placeholder="Search" style="height: 100%; border: 0;">
+            <select id="a" style="height: 100%; border: 0;">
+                <option value="1">Categories</option>
+                <option value="2">2</option>
+            </select>
+            <button type="button" style="height: 100%; border: 0; background-color: yellow; width: 30px;">Src</button>
+        </div>
+    </div>
+    <div style="display: flex; width: 100%;">
+        <div class="menu-doc">
+            <h2 style="display: block; background-color: #ffcc33 ;text-transform: uppercase; padding: 8px 10px; color: black;">Categories</h2>
+            <ul>
+                <li>
+                    <a href="">Roses</a>
+                </li>
+                <li class="cha">
+                    <a href="">Flower Basket</a>
+                    <ul class="con">
+                        <li>
+                            <a href="">Macs</a>
+                        </li>
+                        <li>
+                            <a href="">Windows</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Gerberas</a>
+                </li>
+                <li>
+                    <a href="">Orchids</a>
+                </li>
+            </ul>
+        </div>
+        <div style="width: 75%; display: flex; flex-direction: column; margin: 5px;">
+            <div style="width: 100%; display: flex;">
+                <a style="text-transform: uppercase;">Special</a>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; width: 100%; justify-content: space-around;">
+                <div style="border: 1px outset gray; display: inline-flex;">
+                    <div style="margin: 1px 10px;">
+                        <img src="favicon.ico" width="100px" height="100px" alt="1">
+                    </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <p>Aliquam Querat Voliunten</p>
+                        <div style="display: inline-flex;">
+                            <a style="color: #ff33cc;">$110.00</a>
+                            <a style="color: #999999; text-decoration: line-through;">$122.00</a>
+                        </div>
+                        <div id="btnAddToCart" style="width: auto; margin: 5px 5px;">
+                            <a>+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="border: 1px outset gray; display: inline-flex;">
+                    <div style="margin: 1px 10px;">
+                        <img src="favicon.ico" width="100px" height="100px" alt="1">
+                    </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <p>Aliquam Querat Voliunten</p>
+                        <div style="display: inline-flex;">
+                            <a style="color: #ff33cc;">$110.00</a>
+                            <a style="color: #999999; text-decoration: line-through;">$122.00</a>
+                        </div>
+                        <div id="btnAddToCart" style="width: auto; margin: 5px 5px;">
+                            <a>+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="border: 1px outset gray; display: inline-flex;">
+                    <div style="margin: 1px 10px;">
+                        <img src="favicon.ico" width="100px" height="100px" alt="1">
+                    </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <p>Aliquam Querat Voliunten</p>
+                        <div style="display: inline-flex;">
+                            <a style="color: #ff33cc;">$110.00</a>
+                            <a style="color: #999999; text-decoration: line-through;">$122.00</a>
+                        </div>
+                        <div id="btnAddToCart" style="width: auto; margin: 5px 5px;">
+                            <a>+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="border: 1px outset gray; display: inline-flex;">
+                    <div style="margin: 1px 10px;">
+                        <img src="favicon.ico" width="100px" height="100px" alt="1">
+                    </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <p>Aliquam Querat Voliunten</p>
+                        <div style="display: inline-flex;">
+                            <a style="color: #ff33cc;">$110.00</a>
+                            <a style="color: #999999; text-decoration: line-through;">$122.00</a>
+                        </div>
+                        <div id="btnAddToCart" style="width: auto; margin: 5px 5px;">
+                            <a>+ Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="display: inline-flex; width: 100%; justify-content: space-between; margin-top: 20px;">
+                <div style="width: 30%; height: 70px ; display: inline-flex; align-items: center; background-color: #33cc66;">
+                    <div>
+                        <img src="favicon.ico" alt="1">
+                    </div>
+                    <div>
+                        <p>Seasonal Stock</p>
+                        <p style="font-size: x-small;">Occasional items</p>
+                    </div>
+                </div>
+                <div style="width: 30%; display: inline-flex; align-items: center; background-color: #ff6666;">
+                    <div>
+                        <img src="favicon.ico" alt="1">
+                    </div>
+                    <div>
+                        <p>Seasonal Stock</p>
+                        <p style="font-size: x-small;">Occasional items</p>
+                    </div>
+                </div>
+                <div style="width: 30%; display: inline-flex; align-items: center; background-color: #ff66ff;">
+                    <div>
+                        <img src="favicon.ico" alt="1">
+                    </div>
+                    <div>
+                        <p>Seasonal Stock</p>
+                        <p style="font-size: x-small;">Occasional items</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
